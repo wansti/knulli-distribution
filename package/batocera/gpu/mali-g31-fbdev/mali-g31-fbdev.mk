@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Apr 11, 2024
-MALI_G31_FBDEV_VERSION = 8f34cec8215099481f388fc54d8df44af67a355c
+MALI_G31_FBDEV_VERSION = f91ad32d45f09b9ea437bd19b8099b30400bb85f
 MALI_G31_FBDEV_SITE = $(call github,knulli-cfw,t507_gpu_drivers,$(MALI_G31_FBDEV_VERSION))
 MALI_G31_FBDEV_LICENSE = Proprietary
 MALI_G31_FBDEV_LICENSE_FILES = END_USER_LICENCE_AGREEMENT.txt
