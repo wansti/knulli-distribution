@@ -30,7 +30,7 @@ endef
 define MALI_G31_FBDEV_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
 
-        cp -rf $(@D)/fbdev/mali-g31/aarch64-linux-gnu-7.4.1/lib64/* $(STAGING_DIR)/usr/lib/
+        cp -rf $(@D)/fbdev/mali-g31/aarch64-linux-gnu-7.4.1/lib64/* $(TARGET_DIR)/usr/lib/
 endef
 
 $(eval $(generic-package))
