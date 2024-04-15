@@ -15,7 +15,7 @@ body:
     attributes:
       label: Knulli build version
       description: |
-        Batocera version used.
+        Knulli version used.
         GUI: SYSTEM SETTINGS -> INFORMATION
         Terminal: cat /usr/share/batocera/batocera.version
         Or details can be obtained from batocera-info in your support file. (See logs below)
