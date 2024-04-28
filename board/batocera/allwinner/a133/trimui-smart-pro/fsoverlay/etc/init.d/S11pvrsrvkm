@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /lib/modules/4.9.191
+pvrsrvctl --start
+
+
