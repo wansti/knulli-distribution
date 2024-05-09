@@ -1619,6 +1619,12 @@ libretro:
                     "2":           2
                     "3":           3
                     "4":           4
+            fbneo-hhtate:
+                prompt: HANDHELD TATE MODE
+                description: Rotates the display and remaps inputs for device to be used sideways.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             fbneo-lightgun-hide-crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
@@ -2551,6 +2557,12 @@ libretro:
                     "Neo Geo CD Pad":               "neocd"
                     "Twin Stick with Triggers":     "twinstick"
                     "Rotated 4-Way Stick (Q*Bert)": "qbert"
+            mame-hhtate:
+                prompt: HANDHELD TATE MODE
+                description: Rotates the display and remaps inputs for device to be used sideways.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             hiscoreplugin:
                 group: ADVANCED OPTIONS
                 prompt:      HIGH SCORE PLUGIN

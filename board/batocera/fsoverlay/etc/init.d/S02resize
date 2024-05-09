@@ -109,6 +109,10 @@ then
     esac
     done
 
+    # Allwinner H700
+    echo -e 'r\nb\nc\nY\nw\nY\n' | gdisk ${DISK}
+    partprobe ${DISK}
+
 else
     ###### format internal share #####
     FORMAT_INTERNAL_TYPE=$(grep -E '^[ ]*format-internal[ ]*=.*$' "${BOOTCONF}" | head -1 | sed -e s+"^[ ]*format-internal[ ]*=[ ]*\(.*\)[ ]*$"+"\1"+)

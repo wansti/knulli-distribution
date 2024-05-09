@@ -1,15 +1,14 @@
 #!/bin/sh
 
-# Initialize the counter for the bar
-counter=4
-multiplier=$(echo "100/$(($(ls /etc/init.d/S[0-2]*|wc -l)-1))"|bc -l)
-
 # We need the graphics module in order to use SDL since we are
 # using the sdl-compat/SDL2 for rendering
 insmod /lib/modules/mali_kbase.ko
 
 # Call the charger process
 /usr/bin/charger
+
+# Start the progress bar
+/usr/bin/progressbar &
 
 # Start all init scripts in /etc/init.d
 # executing them in numerical order.
@@ -29,14 +28,9 @@ for i in /etc/init.d/S??* ;do
 	    )
 	    ;;
 	*)
+	    echo "$i" > /tmp/status.txt
 	    # No sh extension, so fork subprocess.
 	    $i start
-	    script_number=$(echo "$i" | sed -n 's/.*\/S\([0-9]\+\).*/\1/p')
-	    if [ "$script_number" -le 31 ]; then
-                num=$(echo "$multiplier * $counter" |bc -l)
-                counter=$(($counter + 1))
-                /usr/bin/progressbar $num
-	    fi
 	    ;;
     esac
 
