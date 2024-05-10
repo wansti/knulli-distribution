@@ -3,8 +3,8 @@
 # EmulationStation theme "Art Book Next"
 #
 ################################################################################
-# Version.: Commits on Mar 23, 2024
-ES_THEME_ART_BOOK_NEXT_VERSION = 1820d14578dfc58a93919be2d026b438e29969b6
+# Version.: Commits on May 10, 2024
+ES_THEME_ART_BOOK_NEXT_VERSION = 2e775231c341ef6a7859beb052a3835cf64e3870
 ES_THEME_ART_BOOK_NEXT_SITE = $(call github,anthonycaccese,art-book-next-es,$(ES_THEME_ART_BOOK_NEXT_VERSION))
 
 define ES_THEME_ART_BOOK_NEXT_INSTALL_TARGET_CMDS
