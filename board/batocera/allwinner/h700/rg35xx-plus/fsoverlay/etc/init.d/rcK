@@ -1,10 +1,5 @@
 #!/bin/sh
 
-#initialize the counter for the bar
-counter=$(($(ls /etc/init.d/S*|wc -l)-1))
-multiplier=$(echo "100/$counter"|bc -l)
-
-
 # Stop all init scripts in /etc/init.d
 # executing them in reversed numerical order.
 #
@@ -23,12 +18,7 @@ for i in $(ls -r /etc/init.d/S??*) ;do
 	    )
 	    ;;
 	*)
-	    # No sh extension, so fork subprocess.
-            num=$(echo "$multiplier * $counter" |bc -l)
-            counter=$(($counter-1))
-            /usr/bin/progressbar $num
 	    $i stop
 	    ;;
     esac
 done
-/usr/bin/progressbar 0
