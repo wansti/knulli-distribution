@@ -3,8 +3,8 @@
 # PowerVR GE8300_DRIVER GPU driver
 #
 ################################################################################
-# Version.: Commits on Apr 27, 2024
-POWERVR_GE8300_DRIVER_VERSION = 3d34daa70c04ca24d3eab499f275b00b424b8b4d
+# Version.: Commits on May 16, 2024
+POWERVR_GE8300_DRIVER_VERSION = 3334cfc9f363dae79c9107d43f8073e0c9db12e5
 POWERVR_GE8300_DRIVER_SITE = https://github.com/knulli-cfw/ge8300-drivers.git
 POWERVR_GE8300_DRIVER_SITE_METHOD = git
 
@@ -31,6 +31,8 @@ define POWERVR_GE8300_DRIVER_INSTALL_TARGET_CMDS
         mkdir -p $(TARGET_DIR)/usr/lib
 
         cp -rf $(@D)/fbdev/glibc/lib64/* $(TARGET_DIR)/usr/lib/
+
+	cp $(@D)/fbdev/glibc/pvrsrvctl $(TARGET_DIR)/usr/bin/
 endef
 
 $(eval $(generic-package))
