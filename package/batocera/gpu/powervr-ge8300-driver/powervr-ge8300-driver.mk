@@ -32,7 +32,7 @@ define POWERVR_GE8300_DRIVER_INSTALL_TARGET_CMDS
 
         cp -rf $(@D)/fbdev/glibc/lib64/* $(TARGET_DIR)/usr/lib/
 
-	cp $(@D)/fbdev/glibc/pvrsrvctl $(TARGET_DIR)/usr/bin/
+	cp $(@D)/fbdev/glibc/bin/pvrsrvctl $(TARGET_DIR)/usr/bin/
 endef
 
 $(eval $(generic-package))
