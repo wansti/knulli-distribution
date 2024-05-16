@@ -13,7 +13,7 @@ RETROARCH_INSTALL_STAGING = YES
 
 RETROARCH_CONF_OPTS = --disable-oss --enable-zlib --disable-qt --enable-threads --enable-ozone \
     --enable-xmb --disable-discord --enable-flac --enable-lua --enable-networking \
-	--enable-translate --enable-rgui --disable-cdrom --enable-mali_fbdev
+	--enable-translate --enable-rgui --disable-cdrom
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
     RETROARCH_CONF_OPTS += --enable-debug
