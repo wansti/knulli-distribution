@@ -62,6 +62,7 @@ BR2_PACKAGE_HOST_UBOOT_TOOLS=y
 #BR2_TARGET_ROOTFS_EXT2_NONE=y
 
 BR2_PACKAGE_POWERVR_GE8300_DRIVER=y
+#BR2_STRIP_EXCLUDE_FILES="usr/lib/libpvrNULL_WSEGL.so usr/lib/libPVROCL.so usr/lib/libPVRScopeServices.so usr/lib/libsrv_um.so usr/lib/libtqvalidate.so usr/lib/libufwriter.so usr/lib/libusc.so"
 
 BR2_PACKAGE_UTIL_LINUX_MOUNT=y
 

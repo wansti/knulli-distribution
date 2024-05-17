@@ -4,7 +4,8 @@
 #
 ################################################################################
 # Version.: Commits on May 16, 2024
-POWERVR_GE8300_DRIVER_VERSION = 3334cfc9f363dae79c9107d43f8073e0c9db12e5
+#POWERVR_GE8300_DRIVER_VERSION = 3334cfc9f363dae79c9107d43f8073e0c9db12e5
+POWERVR_GE8300_DRIVER_VERSION = main
 POWERVR_GE8300_DRIVER_SITE = https://github.com/knulli-cfw/ge8300-drivers.git
 POWERVR_GE8300_DRIVER_SITE_METHOD = git
 

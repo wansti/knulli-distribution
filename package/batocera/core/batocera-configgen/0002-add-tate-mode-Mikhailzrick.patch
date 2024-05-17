@@ -26,7 +26,7 @@
 +                    'btn_r2': '3', 'btn_a': '-1', 'btn_b': '-1', 'btn_x': '-1', 'btn_y': '-1',
 +                }
 +            },
-+            ('030003f05e0400008e02000014010000', 'Xbox 360 Controller'): {  # TrimUI
++            ('030000005e0400008e02000014010000', 'TRIMUI Player1'): {  # TrimUI
 +                'rotation': 'left', 
 +                'remap': {
 +                    'stk_r_x+': '18', 'stk_r_x-': '19', 'stk_r_y+': '17', 'stk_r_y-': '16',
