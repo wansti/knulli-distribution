@@ -65,9 +65,10 @@ class DrasticGenerator(Generator):
 
         textList = [                             # 0,1,2,3 ...
         "enable_sound"                 + " = 1",
+        "show_frame_counter"           + " = 0",
         "compress_savestates"          + " = 1",
         "savestate_snapshot"           + " = 1",
-        "firmware.username"            + " = Batocera",
+        "firmware.username"            + " = Knulli",
         "firmware.language"            + " = " + str(getDrasticLangFromEnvironment()),
         "firmware.favorite_color"      + " = 11",
         "firmware.birthday_month"      + " = 11",
