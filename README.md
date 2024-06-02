@@ -12,7 +12,7 @@ Knulli CFW is a fork of the open-source and completely free retro-gaming distrib
 
  - :globe_with_meridians: Browse our [website](https://knulli.org) for general information (Downloads coming soon)
  - :memo: Documentation is available on our [wiki](https://knulli.org) and frequently updated
- - :speech_balloon: Discuss any topic with the community on our [Discord Server](https://discord.gg/ndyUKA5)
+ - :speech_balloon: Discuss any topic with the community on our [Discord Server](https://discord.gg/HXPS3DAeeB)
 
 ## Do you need help with KNULLI?
 
