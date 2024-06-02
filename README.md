@@ -1,10 +1,10 @@
 [![Activity](https://img.shields.io/github/commit-activity/m/knulli-cfw/distribution)](https://github.com/knulli-cfw/distribution)
 [![PR](https://img.shields.io/github/issues-pr-closed/knulli-cfw/distribution)](https://github.com/knulli-cfw/distribution)
 [![Stars](https://img.shields.io/github/stars/knulli-cfw?style=social)](https://github.com/knulli-cfw/distribution)
-[![Forks](https://img.shields.io/github/forks/knulli-cfw/distribution?style=social)](https://github.com/knulli-cfw/distribution)
-[![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fwww.knulli.org)](https://www.batocera.org)
+[![Forks](https://img.shields.io/github/forks/knulli-cfw/distribution?style=social)](https://github.com/knulli-cfw/distribution
+[![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fwww.knulli.org)](https://knulli.org)
 [![Discord Server](https://img.shields.io/discord/357518249883205632.svg)](https://discord.gg/HXPS3DAeeB)\
-[![Reddit](https://img.shields.io/reddit/subreddit-subscribers/batocera?style=social)](https://www.reddit.com/r/batocera/)
+[![Reddit](https://img.shields.io/reddit/subreddit-subscribers/knulli?style=social)](https://www.reddit.com/r/knulli/)
 <!-- [![Twitter](https://img.shields.io/twitter/follow/batocera_linux?style=social)](https://twitter.com/batocera_linux/)
 [![Youtube](https://img.shields.io/youtube/channel/views/UClFpqHKoXsOIV-GjyZqoZcw?style=social)](https://www.youtube.com/channel/UClFpqHKoXsOIV-GjyZqoZcw/featured) -->
 
@@ -17,10 +17,9 @@ Knulli CFW is a fork of the open-source and completely free retro-gaming distrib
  - :memo: Documentation is available on our [wiki](https://knulli.org) and frequently updated
  - :speech_balloon: Discuss any topic with the community on our [Discord Server](https://discord.gg/ndyUKA5)
 
-## Do you need help with Batocera?
+## Do you need help with KNULLI?
 
  - :sos: The most effective way is to join our [Discord Server](https://discord.gg/HXPS3DAeeB) and go to the \#questions channel
- - :neckbeard: There is a [Batocera subreddit](https://www.reddit.com/r/batocera/) that is fairly active
 
 ## How can you help Knulli?
 
