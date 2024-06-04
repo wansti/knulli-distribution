@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-
-RETROARCH_VERSION = v1.19.0
+# Version: Commits on June 4, 2024 (v1.19.1 that reverts savestates issue)
+RETROARCH_VERSION = 75c647d3caf4f2470cd30ccfcd5fc47b531a3a6c
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
