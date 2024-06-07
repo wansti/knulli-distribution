@@ -59,6 +59,9 @@ endif
 define LIBRETRO_MORPHEUSCAST_INSTALL_TARGET_CMDS
         $(INSTALL) -D $(@D)/flycast_libretro.so \
                 $(TARGET_DIR)/usr/lib/libretro/morpheuscast_libretro.so
+
+	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-morpheuscast/morpheuscast_libretro.info" \
+       		"$(TARGET_DIR)/usr/share/libretro/info/"
 endef
 
 $(eval $(cmake-package))
