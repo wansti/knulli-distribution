@@ -152,6 +152,10 @@ endif
 #	RETROARCH_CONF_OPTS += --enable-mali_fbdev
 #endif
 
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ATM7039),y)
+	RETROARCH_CONF_OPTS += --disable-v4l2
+endif
+
 ifeq ($(BR2_riscv),y)
 	RETROARCH_TARGET_CFLAGS += -DMESA_EGL_NO_X11_HEADERS=1
 endif
