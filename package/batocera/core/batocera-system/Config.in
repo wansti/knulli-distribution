@@ -794,6 +794,17 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                    BR2_PACKAGE_BATOCERA_TARGET_H5       || \
                                                    BR2_PACKAGE_BATOCERA_TARGET_H6
 
+        select BR2_PACKAGE_LIBRETRO_FLYCAST_XTREME if BR2_PACKAGE_BATOCERA_TARGET_BCM2836  || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_BCM2837  || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_BCM2712  || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_RK3326   || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_A133     || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_H700     || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_H3       || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_H5       || \
+                                                   BR2_PACKAGE_BATOCERA_TARGET_H6
+
 
 	select BR2_PACKAGE_REDREAM		if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY # Redream not working with Sway
 

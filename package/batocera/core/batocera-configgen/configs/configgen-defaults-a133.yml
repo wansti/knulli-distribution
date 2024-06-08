@@ -19,10 +19,10 @@ flash:
   core:     lightspark
 atomiswave:
   emulator: libretro
-  core:     morpheuscast
+  core:     flycastvl
 dreamcast:
   emulator: libretro
-  core:     morpheuscast
+  core:     flycastvl
 naomi:
   emulator: libretro
-  core:     morpheuscast
+  core:     flycastvl
