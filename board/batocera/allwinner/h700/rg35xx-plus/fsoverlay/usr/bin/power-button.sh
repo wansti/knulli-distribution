@@ -4,6 +4,7 @@
 # Paths
 POWER_BUTTON_STATE="/var/run/power-button-state.flag"
 LOCK_FILE="/var/run/power-button-script.lock"
+RUMBLE_FILE="/sys/class/power_supply/axp2202-battery/moto"
 
 # Threshold for long press to shutdown (some boards cut power when power button is held too long)
 LONG_PRESS_THRESHOLD=3
@@ -36,7 +37,8 @@ while true; do
     DURATION=$((CURRENT_TIME - START_TIME))
     
     if [ "${DURATION}" -ge "${LONG_PRESS_THRESHOLD}" ]; then
-        shutdown_system
+        echo 1 > "$RUMBLE_FILE" && sleep 0.1 && echo 0 > "$RUMBLE_FILE"
+		shutdown_system
         break
     fi
 done
