@@ -14,8 +14,10 @@ suspend_system() {
 }
 
 shutdown_system() {
-    fbset -xres 0 -yres 0
-    dd if=/dev/zero of=/dev/fb0
+    echo disable > /sys/kernel/debug/dispdbg/command
+    echo lcd0 > /sys/kernel/debug/dispdbg/name
+    echo 1 > /sys/kernel/debug/dispdbg/start
+    amixer set Master mute
     batocera-es-swissknife --emukill
     /usr/bin/poweroff.sh
 }
