@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HALLKEY=/sys/class/power_supply/axp2202-battery/hallkey
+HALLKEY="/sys/class/power_supply/axp2202-battery/hallkey"
 
 if [ -f $HALLKEY ]; then
 	/usr/bin/lid_suspend.sh &
