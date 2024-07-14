@@ -1,0 +1,26 @@
+#!/bin/bash
+
+HALLKEY="/sys/class/power_supply/axp2202-battery/hallkey"
+HDMI_STATE="/sys/devices/platform/soc/6000000.hdmi/extcon/hdmi/state"
+
+suspend_system() {
+	pm-is-supported --suspend && pm-suspend
+}
+
+# suspend if the device has a lid sensor and no HDMI device is connected
+if [ -f $HALLKEY ] && [ ! "$(cat $HDMI_STATE)" = "HDMI\=0" ]; then
+	suspend_system
+
+	# If the system was suspended with the lid,
+	# check if the lid is still closed after waking up
+	# (meaning it was woken up with the power button, probably accidentally).
+	# Keep suspended as long as the lid is still closed.
+	while true; do
+		sleep 1
+		if [ "$(cat $HALLKEY)" = "0" ]; then
+			suspend_system
+		else
+			break
+		fi
+	done
+fi
