@@ -3,10 +3,10 @@
 
 # Paths
 POWER_BUTTON_STATE="/var/run/power-button-state.flag"
+LID_SUSPEND_STATE="/var/run/lid-suspend-state.flag"
 LOCK_FILE="/var/run/power-button-script.lock"
 RUMBLE_FILE="/sys/class/power_supply/axp2202-battery/moto"
 HALLKEY="/sys/class/power_supply/axp2202-battery/hallkey"
-WAKEUP_COUNT="/sys/class/power_supply/axp2202-battery/power/wakeup_count"
 
 # Threshold for long press to shutdown (some boards cut power when power button is held too long)
 LONG_PRESS_THRESHOLD=2000  # in milliseconds
@@ -37,7 +37,6 @@ trap 'flock -u 200; rm -f "${LOCK_FILE}"' EXIT
 echo "1" > "$POWER_BUTTON_STATE"
 
 START_TIME=$(date +%s%3N)
-WAKEUP_COUNT_START=$(cat ${WAKEUP_COUNT})
 while true; do
     sleep 0.1
     
@@ -47,8 +46,8 @@ while true; do
         break
     fi
 
-	if [ "$(cat ${WAKEUP_COUNT})" -gt "${WAKEUP_COUNT_START}" ]; then
-		# Device has been sleeping; reset power button state and exit loop
+	if [ "$(cat ${LID_SUSPEND_STATE})" = "1" ]; then
+		# Suspend is currently managed by lid, reset power button state
 		echo "0" > "$POWER_BUTTON_STATE"
 		break
 	else
@@ -57,7 +56,7 @@ while true; do
 		if [ "${DURATION}" -ge "${LONG_PRESS_THRESHOLD}" ]; then
 			# Test sleep counter again in case we were already
 			# in this branch when the lid was closed
-			if [ "$(cat ${WAKEUP_COUNT})" -le "${WAKEUP_COUNT_START}" ]; then
+			if [ ! "$(cat ${LID_SUSPEND_STATE})" = "1" ]; then
 	   	    	echo 1 > "$RUMBLE_FILE" && sleep 0.1 && echo 0 > "$RUMBLE_FILE"
 		        shutdown_system
     		    break

@@ -2,6 +2,7 @@
 
 HALLKEY="/sys/class/power_supply/axp2202-battery/hallkey"
 HDMI_STATE="/sys/devices/platform/soc/6000000.hdmi/extcon/hdmi/state"
+LID_SUSPEND_STATE="/var/run/lid-suspend-state.flag"
 
 suspend_system() {
 	pm-is-supported --suspend && pm-suspend
@@ -9,6 +10,7 @@ suspend_system() {
 
 # suspend if the device has a lid sensor and no HDMI device is connected
 if [ -f $HALLKEY ] && [ ! "$(cat $HDMI_STATE)" = "HDMI\=0" ]; then
+	echo "1" > "$LID_SUSPEND_STATE"
 	suspend_system
 
 	# If the system was suspended with the lid,
@@ -23,4 +25,5 @@ if [ -f $HALLKEY ] && [ ! "$(cat $HDMI_STATE)" = "HDMI\=0" ]; then
 			break
 		fi
 	done
+	echo "0" > "$LID_SUSPEND_STATE"
 fi
