@@ -1,6 +1,8 @@
 # 2024/xx/xx - batocera.linux 40 -
 ### Special Notes
 The standalone Citra emulator has migrated to it's successor, Lemonade emulator. You should be able to move your saves from /userdata/saves/3ds/citra to the equivalent lemonade directory.
+
+EmulationStation's Video Mode (resolution) is now under System Settings rather than under Frontend Developers.
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
 Add support for OrangePi Zero 3 (all variants)
@@ -18,6 +20,7 @@ Initial support for the Lenovo Legion Go
 - Support for multi screens (for pincab, mame multi games)
 - Evmapy keys file to help exit running flatpak app
 - Steering wheel support for Thrustmaster T150RS
+- RetroAchievements for Flycast & Libretro-Flycast
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
