@@ -1,0 +1,21 @@
+#!/bin/bash
+
+HDMI_STATE_FILE="/sys/devices/platform/soc/6000000.hdmi/extcon/hdmi/state"
+LOCK_FILE="/var/run/lid-suspend-script.lock"
+
+exec 200>"${LOCK_FILE}"
+if ! flock -n 200; then
+    exit 1
+fi
+
+trap 'flock -u 200; rm -f "${LOCK_FILE}"' EXIT
+
+if [ -f "$HDMI_STATE_FILE" ]; then
+    state=$(cat "$HDMI_STATE_FILE")
+    
+    if [ "$state" = "HDMI=0" ]; then
+        pm-suspend
+    fi
+fi
+
+exit 0
