@@ -20,7 +20,7 @@ case "${ACTION}" in
 	if echo "${CODE}" | grep -qE '^enc:'
 	then
 	    PASSWORD=$(getPassword)
-	    if ! echo "${CODE}" | sed -e s+"^enc:"++ | openssl enc -aes-128-cbc -a -d -salt -pass pass:"${PASSWORD} -pbkdf2"
+	    if ! echo "${CODE}" | sed -e s+"^enc:"++ | openssl enc -aes-128-cbc -a -d -salt -pass pass:"${PASSWORD}" -pbkdf2
 	    then
 		exit 1
 	    fi
