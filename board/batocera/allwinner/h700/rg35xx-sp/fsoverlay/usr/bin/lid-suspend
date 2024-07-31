@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Paths
 HDMI_STATE_FILE="/sys/devices/platform/soc/6000000.hdmi/extcon/hdmi/state"
 LOCK_FILE="/var/run/lid-suspend-script.lock"
 

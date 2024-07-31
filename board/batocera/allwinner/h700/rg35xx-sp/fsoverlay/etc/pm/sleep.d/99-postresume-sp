@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Path to lid sensor
 HALLKEY="/sys/class/power_supply/axp2202-battery/hallkey"
 
 case "$1" in
