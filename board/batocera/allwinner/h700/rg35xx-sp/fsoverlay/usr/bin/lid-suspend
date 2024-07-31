@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Paths
+# Paths
 HDMI_STATE_FILE="/sys/devices/platform/soc/6000000.hdmi/extcon/hdmi/state"
 LOCK_FILE="/var/run/lid-suspend-script.lock"
 
@@ -15,7 +15,12 @@ if [ -f "$HDMI_STATE_FILE" ]; then
     state=$(cat "$HDMI_STATE_FILE")
     
     if [ "$state" = "HDMI=0" ]; then
-        pm-suspend
+        enabled="$(/usr/bin/batocera-settings-get system.lid)"
+	    if [ "$enabled" == "shutdown" ]; then
+            /usr/bin/poweroff.sh
+	    else
+            pm-suspend
+        fi
     fi
 fi
 
